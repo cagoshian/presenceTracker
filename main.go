@@ -8,7 +8,7 @@ import (
 	"syscall"
 )
 
-var trackingUserID = "user ID"
+const trackingUserID = "user ID"
 
 func main() {
 	client, _ := discordgo.New("bot token or user token")
