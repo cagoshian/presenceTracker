@@ -12,7 +12,7 @@ const trackingUserID = "user ID"
 
 func main() {
 	client, _ := discordgo.New("bot token or user token")
-	var lastStatus = "-"
+	lastStatus := "-"
 	client.AddHandler(func (client *discordgo.Session, user *discordgo.PresenceUpdate) {
 		if user.User.ID == trackingUserID {
 			if string(user.Presence.Status) != lastStatus {
